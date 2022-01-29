@@ -1,0 +1,163 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --footer-height: 3rem;
+  --sub-footer-height: 0.5rem;
+
+  /*========== Colors ==========*/
+  --primary-color: #D8671B;
+  --first-color: #ff782e;
+  --second-color: #ffd7dc;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --shadow-color: #fcfcfc;
+  --title-color: rgba(0, 0, 0, 0.7);
+  --header-color: #fefbfb;
+  /* --header-border-color: var(--title-color); */
+  --footer-color: #D8671B;
+  --button-color: #D8671B;
+  --hover-color: #D8671B94;
+  --text-color: #000000;
+  --text-secondary-color: #D8671B;
+  --text-color-light: #ffffff;
+  --body-color: #fff;
+  --nav-color: #fff;
+  --container-color: #fff;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Raleway", sans-serif;
+  --biggest-font-size: 1.7rem;
+  --large-font-size: 2rem;
+  --semi-large-font-size: 1.85rem;
+  --medium-font-size: 1.8rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --footer-font-size: 0.928rem;
+  --footer-title-font-size: 1rem;
+  --small-font-size: 0.813rem;
+
+  /*========== Font weight ==========*/
+  --font-semi-bold: 600;
+  --font-light: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+
+  /*========== Margenes ==========*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --large-font-size: 3rem;
+    --biggest-font-size: 3rem;
+    --semi-large-font-size: 2.5rem;
+    --medium-font-size: 2.2rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --footer-font-size: 0.95rem;
+    --footer-title-font-size: 1.2rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+/*========== BASE ==========*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  --first-color-send: #161212;
+  --title-color: #f3f1f1;
+  --text-color: #d1c7c8;
+  --body-color: #040707;
+  --nav-color: var(--footer-color);
+  --container-color: #302728;
+  /* --header-border-color: var(--nav-color); */
+}
+
+.logo__dark {
+  display: none !important;
+}
+
+.logo__light {
+  display: block !important;
+}
+
+/*========== Button Dark/Light ==========*/
+.change-theme {
+  position: absolute;
+  right: 1.5rem;
+  top: 2.2rem;
+  display: flex;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.policy {
+  font-weight: 600;
+  font-size: var(--large-font-size);
+  line-height: 72px;
+}
+.color-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
