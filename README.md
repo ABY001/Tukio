@@ -1,4 +1,4 @@
-# Tukio
+# Eventsly
 
 ## Project setup
 ```

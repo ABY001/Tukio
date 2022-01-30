@@ -7,7 +7,7 @@
             <router-link class="header" :to="{ name: 'Home' }">
               <img
                 :src="require(`../assets/img/EventslyColored.png`)"
-                alt="Tukio_Logo"
+                alt="Eventsly_Logo"
                 class="logo_img"
               />
             </router-link>
