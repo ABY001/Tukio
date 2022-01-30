@@ -1,15 +1,770 @@
 <template>
-    <div>
+  <div>
+    <main class="l-main">
+      <section class="home ad-container" id="home" style="margin-top: 25px">
+        <div class="section__container">
+          <div class="home__box bg-white">
+            <p class="home-head">
+              Events bring people <span style="color: #d8671b">Together.</span>
+            </p>
+            <h3 class="home-title-center">
+              There is no better way to bring people together! Stay up to date
+              with the latest events happening around you.
+            </h3>
+            <div class="video get-started" style="margin-top: 30px">
+              <router-link class="link" :to="{ name: 'Home' }"
+                ><button class="start">Save Spot</button></router-link
+              >
+            </div>
+          </div>
 
-    </div>
+          <div class="home__img">
+            <img :src="require(`../assets/img/photo2.png`)" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="share bd-container section" id="about">
+        <div class="title">
+          <dash />
+          <span style="margin-left: 1rem; font-weight: 500">
+            About Eventsly
+          </span>
+        </div>
+        <div class="create__container bd-grid">
+          <div class="share__data">
+            <p class="section-head">
+              “We understand the importance of human connection”
+            </p>
+            <div class="section-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          <div class="create__img">
+            <img src="../assets/img/photo1.png" alt="" />
+          </div>
+        </div>
+
+        <div class="create__container bd-grid">
+          <div class="share__data" style="margin: auto">
+            <p class="section-head">
+              “We understand the importance of human connection”
+            </p>
+            <div class="section-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          <div class="order__img">
+            <img src="../assets/img/photo3.png" alt="" />
+          </div>
+        </div>
+
+        <div class="create__container bd-grid" style="margin-bottom: 3rem">
+          <div class="share__data">
+            <p class="section-head">
+              “We understand the importance of human connection”
+            </p>
+            <div class="section-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+          <div class="create__img">
+            <img src="../assets/img/photo4.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="share bd-container section__alt" id="about">
+        <div class="title">
+          <dash />
+          <span style="margin-left: 1rem; font-weight: 500"> Explore Now </span>
+        </div>
+        <div class="explore__container">
+          <div class="explore__title">
+            Explore events based on interests! Pick tags to get started
+          </div>
+          <div class="explore__content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. quat.
+          </div>
+          <div class="get-started" style="margin-top: 30px">
+            <router-link class="link" :to="{ name: 'Register' }"
+              ><button class="start">Save Your Spot</button></router-link
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="home cd-container section__alt"
+        id="home"
+        style="margin-top: 25px"
+      >
+        <div class="section__container">
+          <div class="home__box div__box">
+            <div class="started_title">Get started in three easy steps</div>
+            <div class="first_step">
+              <one style="margin-right: 1.3rem" />Sign up with us
+            </div>
+            <div class="steps">
+              <step style="margin: 0 2rem 0 0.8rem" />
+              <span style="margin-top: 10px">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore
+              </span>
+            </div>
+            <div class="first_step">
+              <two style="margin-right: 1.3rem" />Select your area of interest
+            </div>
+            <div class="steps">
+              <step style="margin: 0 2rem 0 0.8rem" />
+              <span style="margin-top: 10px">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore
+              </span>
+            </div>
+            <div class="first_step">
+              <three style="margin-right: 1.3rem" />Get access to thousands of
+              events
+            </div>
+            <div
+              class="get-started"
+              style="margin-top: 30px; text-align: start"
+            >
+              <router-link class="link" :to="{ name: 'Home' }"
+                ><button class="start-light">
+                  Save Your Spot
+                </button></router-link
+              >
+            </div>
+          </div>
+          <div class="home__img">
+            <img :src="require(`../assets/img/photo6.png`)" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="share cd-container section__alt" id="about">
+        <div class="title">
+          <dash />
+          <span style="margin-left: 1rem; font-weight: 500">
+            Share Your Event!
+          </span>
+        </div>
+
+        <div class="section__container" style="margin-top: 3rem">
+          <div class="home__box div__box">
+            <p class="share-head">
+              Do you want to promote your next
+              <span style="color: #d8671b">event?</span>
+            </p>
+            <h3 class="home-title-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. quat.
+            </h3>
+            <div class="video get-started" style="margin-top: 30px">
+              <router-link class="link" :to="{ name: 'Home' }"
+                ><button class="start">Save Your Spot</button></router-link
+              >
+            </div>
+          </div>
+          <div class="home__img">
+            <img :src="require(`../assets/img/photo5.png`)" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+import dash from "../assets/img/dash.svg";
+import one from "../assets/img/01.svg";
+import two from "../assets/img/02.svg";
+import three from "../assets/img/03.svg";
+import step from "../assets/img/step.svg";
+export default {
+  name: "Home",
+  components: { dash, one, two, three, step },
+  created() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  },
+  data() {
+    return {};
+  },
+};
 </script>
-
 <style lang="scss" scoped>
+.home-wrapper {
+  // display: flex;
+  flex-direction: column;
+  @media (min-width: 700px) {
+    // min-height: 650px;
+    // max-height: 650px;
+    flex-direction: row;
+  }
+}
 
+.mobile {
+  display: none;
+  text-align: center;
+  @media (max-width: 700px) {
+    display: block;
+  }
+  .partners {
+    justify-content: center;
+  }
+}
+.desktop {
+  display: block;
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
+.video {
+  grid-template-columns: repeat(2, 200px);
+  margin: 10px 10px 10px 0;
+  align-items: center;
+  gap: 0px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  @media (max-width: 576px) {
+    gap: 0px;
+    grid-template-columns: repeat(2, 165px);
+  }
+  // @media (min-width: 768px) {
+  //   gap: 25px;
+  // }
+  // @media (min-width: 968px) {
+  //   gap: 30px;
+  // }
+  .video__box {
+    // display: inline-block;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-weight-light);
+    @media (max-width: 576px) {
+      font-size: 0.838rem;
+    }
+  }
+  .video__icon {
+    // display: inline-block;
+  }
+}
+
+// .video {
+//   grid-template-columns: repeat(2, 1fr);
+//   align-items: center;
+//   width: 100%;
+//   height: 100%;
+//   .video__box {
+//     width: 100px;
+//     height: 100%;
+//     display: inline-block;
+//     font-size: var(--normal-font-size);
+//     font-weight: var(--font-weight-light);
+//   }
+// }
+
+.first_step {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #d8671b;
+}
+
+.steps {
+  display: flex;
+}
+
+.bg-white {
+  background: rgba(255, 255, 255, 0.83);
+  @media screen and (min-width: 576px) {
+    padding: 3rem 12rem 3rem 5rem;
+    margin-right: -9rem;
+    z-index: 10;
+  }
+}
+
+.started_title {
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.download__section {
+  margin: 85px auto;
+  @media (min-width: 576px) {
+    margin: 85px auto;
+  }
+  @media (min-width: 768px) {
+    margin: 100px auto;
+  }
+  @media (min-width: 968px) {
+    margin: 120px auto;
+  }
+}
+
+.get-working {
+  text-align: center;
+  margin: 170px auto;
+  @media (max-width: 576px) {
+    margin: 170px auto 120px auto;
+  }
+  button.start {
+    width: 17rem;
+    height: 4rem;
+    font-size: var(--h3-font-size);
+  }
+}
+
+.get-partner {
+  text-align: center;
+  margin: 50px auto;
+  @media (max-width: 576px) {
+    margin: 10px auto;
+  }
+  button.start {
+    width: 17rem;
+    height: 4rem;
+    font-size: var(--h3-font-size);
+  }
+}
+
+.get-going {
+  text-align: start;
+  margin: 50px auto;
+  @media (max-width: 576px) {
+    margin: 10px auto;
+  }
+  button.start {
+    width: 17rem;
+    height: 4rem;
+    font-size: var(--h3-font-size);
+    @media (max-width: 576px) {
+      width: 13rem;
+      height: 3.5rem;
+    }
+  }
+}
+.get-started {
+  text-align: center;
+  margin: 50px auto;
+  @media (max-width: 576px) {
+    margin: 10px auto;
+  }
+  button.start2 {
+    width: 17rem;
+    height: 4rem;
+    font-size: var(--h3-font-size);
+    @media (max-width: 576px) {
+      width: 13rem;
+      height: 3.5rem;
+    }
+  }
+  button.start {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    width: 12rem;
+    height: 3.5rem;
+    box-shadow: 0px 4px 4px rgba(255, 103, 0, 0.25);
+    border-radius: 9px;
+    font-size: var(--normal-font-size);
+    // @media (max-width: 576px) {
+    //   width: 10rem;
+    //   height: 3rem;
+    // }
+
+    &:hover {
+      background-color: var(--second-color);
+    }
+  }
+  button.start-light {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(255, 103, 0, 0.22));
+    border-radius: 9px;
+    width: 12rem;
+    height: 3.5rem;
+    font-size: var(--normal-font-size);
+    // @media (max-width: 576px) {
+    //   width: 10rem;
+    //   height: 3rem;
+    // }
+
+    &:hover {
+      background-color: var(--second-color);
+    }
+  }
+}
+
+.title {
+  margin: 3rem auto 0.5rem;
+}
+
+.ease-container {
+  bottom: 0;
+  // position: absolute;
+}
+
+.trusted-title {
+  font-size: 1.6rem;
+  color: var(--black-color);
+  text-align: center;
+  font-weight: var(--font-medium);
+  //   margin-bottom: var(--mb-3);
+  letter-spacing: 0.185em;
+  @media (min-width: 576px) {
+    letter-spacing: 0.185em;
+    font-size: 1.6rem;
+  }
+  @media (min-width: 768px) {
+    letter-spacing: 0.385em;
+    font-size: 1.8rem;
+  }
+  @media (min-width: 968px) {
+    letter-spacing: 0.685em;
+    font-size: 2rem;
+  }
+}
+
+.test {
+  margin-top: var(--mb-3) auto;
+}
+
+.users__testimonial {
+  //   margin-bottom: var(--mb-3);
+  // margin: 70px;
+  // padding: 5px 100px;
+
+  text-align: center;
+  font-weight: var(--font-bold);
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  .desktop {
+    color: var(--primary-color);
+    display: flex;
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+  .mobile {
+    color: var(--black-color);
+    display: none;
+    text-align: center;
+    @media (max-width: 700px) {
+      display: flex;
+    }
+  }
+}
+.bg-primary {
+  //   position: relative;
+  //   background: linear-gradient(180deg, #ff6600 0%, #dd5800 100%);
+  //   border-radius: 0px 150px 0px 300px;
+  //   background-position: -10%;
+
+  //   background-color: var(--primary-color);
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  background: var(--primary-color) no-repeat 95% 50%;
+  //   width: 200%;
+  border-radius: 0px 0px 0px 150px;
+  // margin-left: 3rem;
+
+  // height: 550px;
+}
+.section-card {
+  min-height: 150px;
+  background: #ffffff;
+  border-radius: 30px;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: var(--font-bold);
+  font-size: 1.7rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1050px;
+  // margin: 40px auto;
+  // margin-bottom: -160px;
+  // height: 200px;
+  // z-index: 1;
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
+  @media (max-width: 576px) {
+    border-radius: 8px;
+    // box-shadow: 3px 3px 7px 7px rgba(0, 0, 0, 0.25);
+    margin: 40px 5px;
+    padding: 15px 13px;
+    max-width: 90%;
+    // margin-bottom: 40px 5px -160px 40px;
+    // z-index: 1;
+  }
+  @media (min-width: 576px) {
+    margin: 50px;
+    padding: 25px 55px;
+    // padding: 25px 150px;
+    // margin: 50px 50px -160px 50px;
+    // z-index: 1;
+  }
+  @media (min-width: 768px) {
+    margin: 60px;
+    font-size: 1.8rem;
+    padding: 40px 80px;
+
+    // margin: 60px 60px -160px 60px;
+    // font-size: 1.8rem;
+    // padding: 40px 200px;
+    // // margin-bottom: -160px;
+    // z-index: 1;
+  }
+  @media (min-width: 968px) {
+    margin: 70px;
+    font-size: 2.5rem;
+    padding: 50px 100px;
+
+    // margin-bottom: -160px;
+    // z-index: 1;
+    // margin: 70px 70px -160px 70px;
+    // font-size: 2.5rem;
+    // padding: 50px 270px;
+  }
+}
+
+.logistics__data {
+  text-align: start;
+  width: 60%;
+  margin-right: 40%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  @media (max-width: 768px) {
+    width: 85%;
+    margin-right: 15%;
+  }
+  @media (max-width: 968px) {
+    width: 75%;
+    margin-right: 25%;
+  }
+}
+.delivery__data {
+  text-align: end;
+  width: 60%;
+  margin-left: 40%;
+  margin-right: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  @media (max-width: 768px) {
+    width: 85%;
+    margin-left: 15%;
+  }
+  @media (max-width: 968px) {
+    width: 75%;
+    margin-left: 25%;
+  }
+}
+.logistics-head {
+  color: var(--black-color);
+  font-weight: var(--font-bold);
+  font-size: var(--large-font-size);
+}
+.logistics-title-center {
+  font-size: var(--h2-font-size);
+  color: var(--black-color);
+  margin: 30px auto;
+  font-weight: var(--font-bold);
+  @media (max-width: 576px) {
+    margin: 10px auto;
+  }
+}
+.delivery-head {
+  color: var(--white-color);
+  font-weight: var(--font-bold);
+  font-size: var(--large-font-size);
+}
+.delivery-title-center {
+  font-size: var(--h2-font-size);
+  color: var(--white-color);
+  margin: 30px auto;
+  font-weight: var(--font-bold);
+  @media (max-width: 576px) {
+    margin: 10px auto;
+  }
+}
+.home__img {
+  justify-self: center;
+  padding: 0;
+  //   max-width: 500px;
+  @media (max-width: 576px) {
+    margin-top: 75px;
+    padding: 0;
+  }
+  // img {
+  //   // max-height: 800px;
+  //   width: 100%;
+  // }
+}
+.trust {
+  margin-top: var(--mb-3);
+  @media (max-width: 576px) {
+    margin-top: var(--mb-1);
+  }
+}
+.biz {
+  margin-top: var(--mb-6);
+  @media (max-width: 576px) {
+    margin-top: var(--mb-3);
+  }
+}
+.trusted {
+  // display: flex;
+  // align-items: center;
+  text-align: center;
+  gap: 20px;
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: repeat(6, 120px);
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 968px) {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(6, 90px);
+  }
+  @media (max-width: 576px) {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(3, 80px);
+  }
+  .svg-icon {
+    // width: 8.125rem;
+    // height: 2.5rem;
+    margin: 1rem 1.5rem 1rem 0;
+    color: var(--black-color);
+  }
+}
+.trustee {
+  display: flex;
+  align-items: center;
+  @media (max-width: 576px) {
+    height: 100px;
+  }
+}
+.partners {
+  display: flex;
+  align-items: center;
+  .svg-icon {
+    // width: 8.125rem;
+    // height: 2.5rem;
+    margin: 1rem 1rem 1rem 0;
+    color: var(--black-color);
+  }
+}
+
+.sub-bd-container {
+  /* max-width: 968px; */
+  width: 100%;
+  margin: 0;
+}
+
+.hd-grid {
+  text-align: end;
+}
+.footer__container {
+  row-gap: 0.5rem;
+  // padding: 8rem 0;
+  @media screen and (min-width: 968px) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    // padding: 16rem 8rem;
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+.footer__container .color-overlay {
+  padding: 8rem 0;
+  @media screen and (min-width: 968px) {
+    padding: 16rem 8rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 8rem 0;
+  }
+}
+
+.containerr {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background: linear-gradient(180deg, #ff6600 0%, #dd5800 100%);
+  border-radius: 0px 150px 0px 300px;
+  background-position: -10%;
+  @media (max-width: 680px) {
+    height: 920px;
+  }
+  @media (min-width: 680px) and (max-width: 968px) {
+    height: 332px;
+  }
+  // margin: 0;
+}
+.box {
+  position: absolute;
+  top: -155px;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  box-shadow: 3.72794px 3.72794px 7.45587px rgba(0, 0, 0, 0.25);
+  @media (max-width: 680px) {
+    top: -112px;
+  }
+  @media (min-width: 680px) and (max-width: 968px) {
+    top: -105px;
+  }
+}
+.overlay {
+  margin: 30px auto;
+  @media (max-width: 576px) {
+    margin: 30px 20px;
+  }
+  @media (max-width: 768px) {
+    margin: 30px 30px;
+  }
+  @media (max-width: 1024px) {
+    margin: 30px 40px;
+  }
+}
+.card-box {
+  position: absolute;
+  bottom: -110px;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  @media (max-width: 680px) {
+    bottom: -152px;
+  }
+}
+// .overlay {
+//   margin: 30px auto;
+// }
 </style>

@@ -79,6 +79,9 @@
             </ul>
           </div>
         </div>
+        <!-- <div class="footer_dots"> -->
+        <img :src="footer" class="footer_dots" />
+        <!-- </div> -->
       </div>
     </footer>
   </div>
@@ -88,12 +91,18 @@
 import email from "../assets/img/email.svg";
 import twitter from "../assets/img/twitter.svg";
 import instagram from "../assets/img/instagram.svg";
+import footer from "../assets/img/footer.png";
 export default {
   name: "footer-vue",
   components: {
     email,
     twitter,
     instagram,
+  },
+  data() {
+    return {
+      footer,
+    };
   },
   computed: {},
 };
@@ -143,15 +152,27 @@ export default {
 }
 
 .footer__div {
-  position: absolute;
+  // position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
 }
 
+.footer_dots {
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  right: 0;
+  @media (min-width: 576px) {
+    height: 70px;
+  }
+}
+
 footer {
+  position: relative;
   margin-top: 60px;
-  padding: 40px 25px;
+  // padding: 40px 25px;
+  padding: 40px 25px 120px;
   background-color: var(--footer-color);
   // font-weight: var(--font-semi-bold);
   .container {
@@ -181,7 +202,7 @@ footer {
       font-size: var(--footer-font-size);
       @media (min-width: 768px) {
         flex-direction: row;
-        gap: 0;
+        gap: 90px;
       }
       // @media (max-width: 768px) {
       //   flex-direction: row;
