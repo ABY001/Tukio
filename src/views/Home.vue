@@ -11,9 +11,15 @@
               There is no better way to bring people together! Stay up to date
               with the latest events happening around you.
             </h3>
-            <div class="video get-started" style="margin-top: 30px">
-              <router-link class="link" :to="{ name: 'Home' }"
+            <div class="video get-started" style="margin-top: 40px">
+              <router-link class="link desktop" :to="{ name: 'Home' }"
                 ><button class="start">Save Spot</button></router-link
+              >
+              <router-link class="link mobile" :to="{ name: 'Home' }"
+                ><button class="start">Get Started</button></router-link
+              >
+              <router-link class="link mobile" :to="{ name: 'Home' }"
+                ><button class="start-light">Get The App</button></router-link
               >
             </div>
           </div>
@@ -95,9 +101,9 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. quat.
           </div>
-          <div class="get-started" style="margin-top: 30px">
+          <div class="get-started" style="margin-top: 40px">
             <router-link class="link" :to="{ name: 'Register' }"
-              ><button class="start">Save Your Spot</button></router-link
+              ><button class="start">Explore Now</button></router-link
             >
           </div>
         </div>
@@ -109,7 +115,11 @@
         style="margin-top: 25px"
       >
         <div class="section__container">
-          <div class="home__box div__box">
+          <div class="step__box div__box">
+            <div class="theater__img">
+              Ready to find the next event?
+              <!-- <img src="../assets/img/theater.png" class="theater" alt="" /> -->
+            </div>
             <div class="started_title">Get started in three easy steps</div>
             <div class="first_step">
               <one style="margin-right: 1.3rem" />Sign up with us
@@ -135,14 +145,9 @@
               <three style="margin-right: 1.3rem" />Get access to thousands of
               events
             </div>
-            <div
-              class="get-started"
-              style="margin-top: 30px; text-align: start"
-            >
+            <div class="get-started steps-button">
               <router-link class="link" :to="{ name: 'Home' }"
-                ><button class="start-light">
-                  Save Your Spot
-                </button></router-link
+                ><button class="start-light">Get Started</button></router-link
               >
             </div>
           </div>
@@ -161,24 +166,96 @@
         </div>
 
         <div class="section__container" style="margin-top: 3rem">
-          <div class="home__box div__box">
+          <div class="home__box div__box" style="text-align: initial">
             <p class="share-head">
               Do you want to promote your next
               <span style="color: #d8671b">event?</span>
             </p>
-            <h3 class="home-title-center">
+            <h3 class="home-title-start">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. quat.
             </h3>
-            <div class="video get-started" style="margin-top: 30px">
+            <div class="video get-started" style="margin-top: 40px">
               <router-link class="link" :to="{ name: 'Home' }"
-                ><button class="start">Save Your Spot</button></router-link
+                ><button class="start">Get Started</button></router-link
               >
             </div>
           </div>
-          <div class="home__img">
+          <div class="home__img mg-rt">
             <img :src="require(`../assets/img/photo5.png`)" alt="" />
           </div>
+        </div>
+      </section>
+
+      <section
+        class="home cd-container section__alt mobile"
+        id="home"
+        style="margin-top: 25px"
+      >
+        <div class="section__container">
+          <div class="step__box div__box">
+            <div class="started_title">Download the free Tukio app</div>
+            <div class="download__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. quat.
+            </div>
+
+            <div class="google-play">
+              <img src="../assets/img/Google.png" width="150px" alt="" />
+            </div>
+            <div class="mobile-screen">
+              <img src="../assets/img/phone.png" width="300px" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="home cd-container section__alt mobile"
+        id="home"
+        style="margin-top: 25px; margin-bottom: 25px"
+      >
+        <div class="title">
+          <dash />
+          <span style="margin-left: 1rem; font-weight: 500"> FAQ’s </span>
+        </div>
+        <div class="section__container">
+          <div class="step__box div__box">
+            <div class="started_title" style="margin-top: 3rem">
+              Frequently Asked Questions
+            </div>
+            <div class="download__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-container">
+          <div class="card-wrapper">
+            <div
+              class="card-text-wrapper hide"
+              id="faq"
+              v-for="faq in faqs"
+              :key="faq._id"
+            >
+              <arrowUp class="collapse__icon" id="minus" />
+              <arrowDown class="expand__icon" id="plus" />
+              <p class="card-title">
+                {{ faq.question }}
+              </p>
+              <p class="card-text" id="text">
+                {{ faq.answer }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="get-started" style="margin-top: 40px">
+          <router-link class="link" :to="{ name: 'Home' }"
+            ><button class="start">Contact Us</button></router-link
+          >
         </div>
       </section>
     </main>
@@ -191,14 +268,53 @@ import one from "../assets/img/01.svg";
 import two from "../assets/img/02.svg";
 import three from "../assets/img/03.svg";
 import step from "../assets/img/step.svg";
+import arrowDown from "../assets/icons/arrow-down.svg";
+import arrowUp from "../assets/icons/arrow-up.svg";
 export default {
   name: "Home",
-  components: { dash, one, two, three, step },
+  components: { dash, one, two, three, step, arrowUp, arrowDown },
   created() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   },
   data() {
-    return {};
+    return {
+      faqs: [
+        {
+          question: "How do i post an event",
+          answer:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        },
+        {
+          question: "How do i post an event",
+          answer:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        },
+        {
+          question: "How do i post an event",
+          answer:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        },
+        {
+          question: "How do i post an event",
+          answer:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        },
+      ],
+    };
+  },
+  mounted() {
+    let answers = document.querySelectorAll(".card-text-wrapper");
+    answers.forEach((event) => {
+      event.addEventListener("click", () => {
+        if (event.classList.contains("show")) {
+          event.classList.remove("show");
+          event.classList.add("hide");
+        } else {
+          event.classList.remove("hide");
+          event.classList.add("show");
+        }
+      });
+    });
   },
 };
 </script>
@@ -223,9 +339,17 @@ export default {
     justify-content: center;
   }
 }
+
+.mobile {
+  display: block;
+  @media (min-width: 576px) {
+    display: none;
+  }
+}
+
 .desktop {
   display: block;
-  @media (max-width: 700px) {
+  @media (max-width: 576px) {
     display: none;
   }
 }
@@ -239,8 +363,8 @@ export default {
   height: 100%;
   display: grid;
   @media (max-width: 576px) {
-    gap: 0px;
-    grid-template-columns: repeat(2, 165px);
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
   // @media (min-width: 768px) {
   //   gap: 25px;
@@ -259,6 +383,12 @@ export default {
   .video__icon {
     // display: inline-block;
   }
+}
+
+.google-play,
+.mobile-screen {
+  text-align: center;
+  margin: 8px auto;
 }
 
 // .video {
@@ -296,8 +426,13 @@ export default {
 
 .started_title {
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
+  max-width: 300px;
+  @media screen and (max-width: 576px) {
+    margin: auto auto 1.5rem auto;
+    text-align: center;
+  }
 }
 
 .download__section {
@@ -376,12 +511,12 @@ export default {
     width: 12rem;
     height: 3.5rem;
     box-shadow: 0px 4px 4px rgba(255, 103, 0, 0.25);
-    border-radius: 9px;
+    border-radius: 4px;
     font-size: var(--normal-font-size);
-    // @media (max-width: 576px) {
-    //   width: 10rem;
-    //   height: 3rem;
-    // }
+    @media (max-width: 576px) {
+      width: 10rem;
+      height: 3rem;
+    }
 
     &:hover {
       background-color: var(--second-color);
@@ -393,14 +528,13 @@ export default {
     border: 2px solid var(--primary-color);
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(255, 103, 0, 0.22));
-    border-radius: 9px;
     width: 12rem;
     height: 3.5rem;
     font-size: var(--normal-font-size);
-    // @media (max-width: 576px) {
-    //   width: 10rem;
-    //   height: 3rem;
-    // }
+    @media (max-width: 576px) {
+      width: 10rem;
+      height: 3rem;
+    }
 
     &:hover {
       background-color: var(--second-color);
@@ -409,7 +543,8 @@ export default {
 }
 
 .title {
-  margin: 3rem auto 0.5rem;
+  margin: 5rem auto 0.5rem;
+  text-align: initial;
 }
 
 .ease-container {
@@ -469,21 +604,8 @@ export default {
   }
 }
 .bg-primary {
-  //   position: relative;
-  //   background: linear-gradient(180deg, #ff6600 0%, #dd5800 100%);
-  //   border-radius: 0px 150px 0px 300px;
-  //   background-position: -10%;
-
-  //   background-color: var(--primary-color);
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
   background: var(--primary-color) no-repeat 95% 50%;
-  //   width: 200%;
   border-radius: 0px 0px 0px 150px;
-  // margin-left: 3rem;
-
-  // height: 550px;
 }
 .section-card {
   min-height: 150px;
@@ -581,6 +703,71 @@ export default {
     margin-left: 25%;
   }
 }
+
+.card-wrapper {
+  width: 100%;
+  margin-top: 3rem;
+  position: relative;
+  @media screen and (max-width: 768px) {
+    margin-top: 2.5rem;
+  }
+}
+.card-text {
+  font-weight: var(--font-weight-medium);
+  line-height: 27px;
+  width: 80%;
+  margin-top: 1rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.card-text-wrapper {
+  // bottom: 0;
+  // width: 100%;
+  // padding: 3rem;
+  // box-sizing: border-box;
+  // // background-color: blue;
+
+  margin: 2rem 0;
+  background: rgba(255, 255, 255, 0.12);
+  border: 3px solid #d8671b;
+  box-sizing: border-box;
+  border-radius: 7px;
+  @media screen and (max-width: 768px) {
+    padding: 1.5rem 2rem;
+  }
+  &.hide .collapse__icon {
+    display: none;
+  }
+  &.hide .expand__icon {
+    display: block;
+  }
+  &.hide .card-text {
+    display: none;
+  }
+  &.show .collapse__icon {
+    display: block;
+  }
+  &.show .expand__icon {
+    display: none;
+  }
+  &.show .card-text {
+    display: block;
+  }
+}
+.card-title {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: var(--font-medium);
+  text-align: initial;
+}
+.expand__icon,
+.collapse__icon {
+  float: right;
+  text-align: center;
+  margin-top: 7px;
+}
+
 .logistics-head {
   color: var(--black-color);
   font-weight: var(--font-bold);

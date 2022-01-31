@@ -141,6 +141,11 @@ button,
   }
 }
 
+.faq-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .cd-container {
   // max-width: 1140px;
   // width: calc(100% - 3rem);
@@ -148,6 +153,12 @@ button,
   margin-right: var(--mb-3);
   @media screen and (min-width: 968px) {
     margin: 0.5rem 0 0.5rem 3rem;
+  }
+}
+
+.mg-rt {
+  @media (max-width: 576px) {
+    margin-right: -3rem;
   }
 }
 
@@ -240,6 +251,11 @@ button,
   margin: 5px auto;
 }
 
+.download__content {
+  text-align: center;
+  margin: 25px auto;
+}
+
 .explore__title {
   text-align: center;
   font-weight: 600;
@@ -271,6 +287,30 @@ button,
   align-content: flex-end;
 }
 
+.theater {
+  background: #c4c4c4;
+  border-radius: 23px;
+}
+
+.theater__img {
+  margin: 10px auto 60px;
+  background-image: url("assets/img/theater.png");
+  color: white;
+  border-radius: 23px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  @media (min-width: 576px) {
+    display: none;
+  }
+}
+
 .order__img {
   @media (min-width: 576px) {
     order: -1;
@@ -279,6 +319,15 @@ button,
   align-content: flex-start;
 }
 
+.steps-button {
+  margin-top: 40px !important;
+  text-align: start;
+  @media (max-width: 576px) {
+    text-align: center;
+  }
+}
+
+.home-title-start,
 .home-title-center {
   color: var(--black-color);
   font-weight: var(--font-light);
@@ -291,6 +340,13 @@ button,
 .home__box,
 .home-title-center,
 .video__box {
+  text-align: initial;
+  @media (max-width: 576px) {
+    text-align: center;
+  }
+}
+
+.step__box {
   text-align: initial;
 }
 

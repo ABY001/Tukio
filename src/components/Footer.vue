@@ -2,6 +2,7 @@
   <div class="footer__div">
     <footer>
       <div class="container">
+        <img :src="footer" class="footer_topdots" />
         <div class="left">
           <div class="col-1">
             <router-link class="header" :to="{ name: 'Home' }">
@@ -160,11 +161,21 @@ export default {
 
 .footer_dots {
   position: absolute;
-  height: 50px;
+  height: 70px;
   bottom: 0;
   right: 0;
   @media (min-width: 576px) {
     height: 70px;
+  }
+}
+
+.footer_topdots {
+  position: absolute;
+  height: 70px;
+  top: -15px;
+  left: -40px;
+  @media (min-width: 576px) {
+    display: none;
   }
 }
 
@@ -174,6 +185,10 @@ footer {
   // padding: 40px 25px;
   padding: 40px 25px 120px;
   background-color: var(--footer-color);
+  @media (max-width: 576px) {
+    padding: 80px 25px 65px 34px;
+  }
+
   // font-weight: var(--font-semi-bold);
   .container {
     display: flex;

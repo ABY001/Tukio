@@ -22,12 +22,7 @@
       </div>
     </nav>
 
-    <img
-      :src="menuIcon"
-      @click="toggleMobileNav"
-      class="menu-icon"
-      v-show="mobile"
-    />
+    <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile" />
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav" @click="toggleMobileNav">
         <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
@@ -42,12 +37,14 @@
 </template>
 
 <script>
-import menuIcon from "../assets/icons/hamburger.png";
+import menuIcon from "../assets/icons/hamburger.svg";
 export default {
   name: "navigation",
+  components: {
+    menuIcon,
+  },
   data() {
     return {
-      menuIcon,
       profileMenu: null,
       mobile: null,
       mobileNav: null,
@@ -133,6 +130,7 @@ header {
     // }
 
     .logo_img {
+      margin-top: 18px;
       width: 80%;
       @media (max-width: 1200px) {
         width: 75%;

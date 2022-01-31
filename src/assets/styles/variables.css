@@ -26,7 +26,7 @@
 
   /*========== Font and typography ==========*/
   --body-font: "Raleway", sans-serif;
-  --biggest-font-size: 1.7rem;
+  --biggest-font-size: 2rem;
   --large-font-size: 2rem;
   --semi-large-font-size: 1.85rem;
   --medium-font-size: 1.8rem;
@@ -34,7 +34,7 @@
   --h3-font-size: 1.125rem;
   --normal-font-size: 0.938rem;
   --footer-font-size: 0.928rem;
-  --footer-title-font-size: 1rem;
+  --footer-title-font-size: 1.2rem;
   --small-font-size: 0.813rem;
 
   /*========== Font weight ==========*/
@@ -66,7 +66,7 @@
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
     --footer-font-size: 0.95rem;
-    --footer-title-font-size: 1.2rem;
+    --footer-title-font-size: 1.3rem;
     --small-font-size: 0.875rem;
   }
 }
