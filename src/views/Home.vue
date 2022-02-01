@@ -182,7 +182,16 @@
             </div>
           </div>
           <div class="home__img mg-rt">
-            <img :src="require(`../assets/img/photo5.png`)" alt="" />
+            <img
+              :src="require(`../assets/img/photo5.png`)"
+              alt=""
+              class="desktop"
+            />
+            <img
+              :src="require(`../assets/img/photo5-1.png`)"
+              alt=""
+              class="mobile"
+            />
           </div>
         </div>
       </section>
