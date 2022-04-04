@@ -1,9 +1,82 @@
 <template>
-  <div>
+  <div class="modal-vue">
     <main class="l-main">
+      <!-- overlay -->
+      <div class="overlay" v-if="showModal" @click="showModal = false"></div>
+
+      <!-- modal -->
+      <div class="modal" v-if="showModal">
+        <!-- <button class="close" @click="showModal = false">x</button> -->
+        <span v-if="showForm">
+          <div class="modal-head">
+            <h3 class="success-text">
+              Be one of the first to find your <br />
+              <span style="color: #d8671b"> Crowd. </span>
+            </h3>
+            <span style="width: 120px">
+              <img
+                :src="require(`../assets/img/Eventsly.png`)"
+                alt="Eventsly_Logo"
+                class="modal_img"
+              />
+            </span>
+          </div>
+          <div class="modal-caption">
+            We just need a few details to save your spot!
+          </div>
+
+          <div class="inputs">
+            <div class="input">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                v-model="email"
+                placeholder="Your email address"
+              />
+            </div>
+            <div class="input">
+              <input
+                type="fullname"
+                name="fullname"
+                id="fullname"
+                v-model="fullname"
+                placeholder="Your full name"
+              />
+            </div>
+            <div class="video get-started" style="margin-top: 5rem">
+              <button class="start link" @click="register">Save Spot</button>
+            </div>
+          </div>
+          <div class="footer-modal">
+            <img
+              :src="require(`../assets/img/modal-footer.png`)"
+              alt=""
+              style="height: 100%"
+            />
+          </div>
+        </span>
+
+        <span v-else>
+          <div class="success-container">
+            <success />
+            <div class="success-text" style="margin: 13px auto">All Done!</div>
+            <div class="success-content">
+              Thank you for being a part of your journey. We’ll inform you about
+              the product<br />
+              launch soon.
+            </div>
+            <div class="get-started" style="margin-top: 4rem">
+              <button class="start link" @click="showModal = false">
+                Got it!
+              </button>
+            </div>
+          </div>
+        </span>
+      </div>
       <section class="home ad-container" id="home" style="margin-top: 25px">
         <div class="section__container">
-          <div class="home__box bg-white">
+          <div class="home__box bg-white top-margin">
             <p class="home-head">
               Events bring people <span style="color: #d8671b">Together.</span>
             </p>
@@ -12,18 +85,15 @@
               with the latest events happening around you.
             </h3>
             <div class="video get-started" style="margin-top: 40px">
-              <router-link class="link desktop" :to="{ name: 'Home' }"
-                ><button class="start">Save Spot</button></router-link
-              >
-              <router-link class="link mobile" :to="{ name: 'Home' }"
-                ><button class="start">Get Started</button></router-link
-              >
-              <router-link class="link mobile" :to="{ name: 'Home' }"
-                ><button class="start-light">Get The App</button></router-link
-              >
+              <button class="start link desktop" @click="showModal = true">
+                Save Spot
+              </button>
+              <button class="start link mobile" @click="showModal = true">
+                Get Started
+              </button>
+              <button class="start-light link mobile">Get The App</button>
             </div>
           </div>
-
           <div class="home__img">
             <img :src="require(`../assets/img/photo2.png`)" alt="" />
           </div>
@@ -39,13 +109,13 @@
         <div class="create__container bd-grid">
           <div class="share__data">
             <p class="section-head">
-              “We understand the importance of human connection”
+              We understand the importance of human connection
             </p>
             <div class="section-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              We at Eventsly believe that humans can’t find true happiness and
+              fufilment in isolation. In that vein, we’re on a one-track journey
+              to finding you that person or group of persons that will bring
+              some joy into your life!
             </div>
           </div>
           <div class="create__img">
@@ -56,13 +126,12 @@
         <div class="create__container bd-grid">
           <div class="share__data" style="margin: auto">
             <p class="section-head">
-              “We understand the importance of human connection”
+              Why don’t you make some cash while having fun?
             </p>
             <div class="section-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              We also provide an avenue for everyone to sell online tickets for
+              events hosted by you. So, if you feel an event is monetizable,
+              monetize it!
             </div>
           </div>
           <div class="order__img">
@@ -72,14 +141,11 @@
 
         <div class="create__container bd-grid" style="margin-bottom: 3rem">
           <div class="share__data">
-            <p class="section-head">
-              “We understand the importance of human connection”
-            </p>
+            <p class="section-head">Share experiences with the ones you love</p>
             <div class="section-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              We provide easy ways to share these events with the people you
+              want most by your side as we believe shared experiences is what
+              life is all about.
             </div>
           </div>
           <div class="create__img">
@@ -91,19 +157,21 @@
       <section class="share bd-container section__alt" id="about">
         <div class="title">
           <dash />
-          <span style="margin-left: 1rem; font-weight: 500"> Explore Now </span>
+          <span style="margin-left: 1rem; font-weight: 500">
+            Save your spot
+          </span>
         </div>
         <div class="explore__container">
           <div class="explore__title">
-            Explore events based on interests! Pick tags to get started
+            We’re working on a product to deliver this to you ASAP!
           </div>
           <div class="explore__content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. quat.
+            Save your spot with a pre-registered account by clicking the button
+            below now!
           </div>
           <div class="get-started" style="margin-top: 40px">
-            <router-link class="link" :to="{ name: 'Register' }"
-              ><button class="start">Explore Now</button></router-link
+            <router-link class="link" :to="{ name: 'Home' }"
+              ><button class="start">Save Your Spot</button></router-link
             >
           </div>
         </div>
@@ -111,7 +179,7 @@
 
       <section
         class="home cd-container section__alt"
-        id="home"
+        id="explore"
         style="margin-top: 25px"
       >
         <div class="section__container">
@@ -120,25 +188,27 @@
               Ready to find the next event?
               <!-- <img src="../assets/img/theater.png" class="theater" alt="" /> -->
             </div>
-            <div class="started_title">Get started in three easy steps</div>
+            <div class="started_title start">
+              Get started in three easy steps
+            </div>
             <div class="first_step">
               <one style="margin-right: 1.3rem" />Sign up with us
             </div>
             <div class="steps">
               <step style="margin: 0 2rem 0 0.8rem" />
               <span style="margin-top: 10px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore
+                We’ll keep your info safe, we promise. This will get you
+                authenticated and ready to go.
               </span>
             </div>
             <div class="first_step">
-              <two style="margin-right: 1.3rem" />Select your area of interest
+              <two style="margin-right: 1.3rem" />Setup location
             </div>
             <div class="steps">
               <step style="margin: 0 2rem 0 0.8rem" />
               <span style="margin-top: 10px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore
+                We’ll also collect a rough estimate of your location to give you
+                tailored social events!
               </span>
             </div>
             <div class="first_step">
@@ -147,7 +217,9 @@
             </div>
             <div class="get-started steps-button">
               <router-link class="link" :to="{ name: 'Home' }"
-                ><button class="start-light">Get Started</button></router-link
+                ><button class="start-light">
+                  Save Your Spot
+                </button></router-link
               >
             </div>
           </div>
@@ -172,12 +244,12 @@
               <span style="color: #d8671b">event?</span>
             </p>
             <h3 class="home-title-start">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. quat.
+              This platform will also empower event planners in giving them the
+              power to reach out to a wide range of audiences.
             </h3>
             <div class="video get-started" style="margin-top: 40px">
               <router-link class="link" :to="{ name: 'Home' }"
-                ><button class="start">Get Started</button></router-link
+                ><button class="start">Save Your Spot</button></router-link
               >
             </div>
           </div>
@@ -277,16 +349,22 @@ import one from "../assets/img/01.svg";
 import two from "../assets/img/02.svg";
 import three from "../assets/img/03.svg";
 import step from "../assets/img/step.svg";
+import success from "../assets/img/success.svg";
 import arrowDown from "../assets/icons/arrow-down.svg";
 import arrowUp from "../assets/icons/arrow-up.svg";
+import axios from "axios";
 export default {
   name: "Home",
-  components: { dash, one, two, three, step, arrowUp, arrowDown },
+  components: { success, dash, one, two, three, step, arrowUp, arrowDown },
   created() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   },
   data() {
     return {
+      email: "",
+      fullname: "",
+      showModal: false,
+      showForm: true,
       faqs: [
         {
           question: "How do i post an event",
@@ -324,6 +402,48 @@ export default {
         }
       });
     });
+  },
+  methods: {
+    test() {
+      this.$tostini({
+        message: "Delicious!",
+        type: "success",
+      });
+    },
+    async register() {
+      if (this.email !== "" && this.fullname !== "") {
+        this.error = false;
+        this.errorMsg = "";
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = {
+          email: this.email,
+          fullname: this.fullname,
+        };
+        console.log("here", raw);
+
+        axios
+          .post(
+            "https://eventsly-api.herokuapp.com/pre-register-api/v1/add-user/",
+            raw
+          )
+          .then((response) => {
+            console.log(response);
+            if (response.status) {
+              this.showForm = false;
+            }
+            // this.$router.push({ name: "Home" });
+          })
+          .then((result) => console.log(result))
+          .catch((error) => console.log("error", error));
+        return;
+      }
+      this.error = true;
+      this.errorMsg = "Please fill out all the fields!";
+      return;
+    },
   },
 };
 </script>
@@ -418,6 +538,11 @@ export default {
   font-weight: 500;
   font-size: 1.1rem;
   color: #d8671b;
+}
+
+.start {
+  font-family: var(--header-font);
+  font-weight: var(--font-light) !important;
 }
 
 .steps {
@@ -938,18 +1063,18 @@ export default {
     top: -105px;
   }
 }
-.overlay {
-  margin: 30px auto;
-  @media (max-width: 576px) {
-    margin: 30px 20px;
-  }
-  @media (max-width: 768px) {
-    margin: 30px 30px;
-  }
-  @media (max-width: 1024px) {
-    margin: 30px 40px;
-  }
-}
+// .overlay {
+//   margin: 30px auto;
+//   @media (max-width: 576px) {
+//     margin: 30px 20px;
+//   }
+//   @media (max-width: 768px) {
+//     margin: 30px 30px;
+//   }
+//   @media (max-width: 1024px) {
+//     margin: 30px 40px;
+//   }
+// }
 .card-box {
   position: absolute;
   bottom: -110px;
@@ -960,6 +1085,103 @@ export default {
     bottom: -152px;
   }
 }
+.footer-modal {
+  position: absolute;
+  height: 0px;
+  bottom: 0;
+  right: 0;
+  @media (min-width: 576px) {
+    height: 200px;
+  }
+}
+.modal-caption {
+  margin-top: 20px;
+}
+.modal-vue .overlay {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-vue .modal {
+  position: relative;
+  width: 80%;
+  z-index: 9999;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal_img {
+  width: 100%;
+  margin-right: 0;
+}
+
+.modal-vue .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.inputs {
+  width: 100%;
+  max-width: 425px;
+  background: #ffffff;
+  padding-top: 40px;
+
+  .error {
+    color: red;
+  }
+
+  .input {
+    // position: relative;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin-bottom: 20px;
+
+    input {
+      width: 100%;
+      background: #fdfaf9;
+      border: 2px solid #d8671b;
+      box-sizing: border-box;
+      border-radius: 5px;
+      height: 50px;
+      padding: 4px 4px 4px 10px;
+
+      &:focus {
+        box-shadow: 0 0 28px #ff782e40;
+      }
+    }
+  }
+}
+
+.success-container {
+  margin: 20px;
+  text-align: center;
+}
+
+.success-text {
+  font-size: 2rem;
+  line-height: 34px;
+  font-weight: var(--font-semi-bold);
+}
+
+.success-content {
+  font-weight: 600;
+  font-size: 14px;
+}
+
 // .overlay {
 //   margin: 30px auto;
 // }

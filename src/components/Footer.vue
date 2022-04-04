@@ -1,5 +1,5 @@
 <template>
-  <div class="footer__div">
+  <div class="footer__div" id="footer">
     <footer>
       <div class="container">
         <img :src="footer" class="footer_topdots" />
@@ -34,10 +34,10 @@
               <router-link class="link-light" :to="{ name: 'Home' }"
                 >Features</router-link
               >
-              <router-link class="link-light" :to="{ name: 'Hiring' }"
+              <router-link class="link-light" :to="{ name: 'Home' }"
                 >Login</router-link
               >
-              <router-link class="link-light" :to="{ name: 'Contact' }"
+              <router-link class="link-light" :to="{ name: 'Home' }"
                 >Get Started</router-link
               >
             </ul>
@@ -48,16 +48,16 @@
               <router-link class="link-light" :to="{ name: 'Home' }"
                 >Features</router-link
               >
-              <router-link class="link-light" :to="{ name: 'Hiring' }"
+              <router-link class="link-light" :to="{ name: 'Home' }"
                 >Login</router-link
               >
-              <router-link class="link-light" :to="{ name: 'Contact' }"
+              <router-link class="link-light" :to="{ name: 'Home' }"
                 >Get Started</router-link
               >
-              <router-link class="link-light" :to="{ name: 'Hiring' }"
+              <router-link class="link-light" :to="{ name: 'Home' }"
                 >Terms of Use</router-link
               >
-              <router-link class="link-light" :to="{ name: 'Contact' }"
+              <router-link class="link-light" :to="{ name: 'Home' }"
                 >Privacy Policy</router-link
               >
             </ul>
@@ -68,13 +68,13 @@
               <router-link class="link-light" :to="{ name: 'Home' }"
                 >Features</router-link
               >
-              <router-link class="link-light" :to="{ name: 'Hiring' }"
+              <router-link class="link-light" :to="{ name: 'Home' }"
                 >Login</router-link
               >
-              <router-link class="link-light" :to="{ name: 'Contact' }"
+              <router-link class="link-light" :to="{ name: 'Home' }"
                 >Get Started</router-link
               >
-              <router-link class="link-light" :to="{ name: 'Hiring' }"
+              <router-link class="link-light" :to="{ name: 'Home' }"
                 >Legal</router-link
               >
             </ul>

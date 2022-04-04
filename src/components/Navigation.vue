@@ -12,12 +12,10 @@
       </div>
       <div class="nav-links">
         <ul v-show="!mobile">
-          <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-          <router-link class="link" :to="{ name: 'Home' }">About</router-link>
-          <router-link class="link" :to="{ name: 'Home' }">Explore</router-link>
-          <router-link class="link" :to="{ name: 'Home' }"
-            >Contact Us</router-link
-          >
+          <a href="#home" class="link">Home</a>
+          <a href="#about" class="link">About</a>
+          <a href="#explore" class="link">Explore</a>
+          <a href="#footer" class="link">Contact Us</a>
         </ul>
       </div>
     </nav>
@@ -25,12 +23,10 @@
     <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile" />
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav" @click="toggleMobileNav">
-        <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-        <router-link class="link" :to="{ name: 'Home' }">About</router-link>
-        <router-link class="link" :to="{ name: 'Home' }">Explore</router-link>
-        <router-link class="link" :to="{ name: 'Home' }"
-          >Contact Us</router-link
-        >
+        <a href="#home" class="link">Home</a>
+        <a href="#about" class="link">About</a>
+        <a href="#explore" class="link">Explore</a>
+        <a href="#footer" class="link">Contact Us</a>
       </ul>
     </transition>
   </header>

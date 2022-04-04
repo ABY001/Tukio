@@ -25,7 +25,8 @@
   --container-color: #fff;
 
   /*========== Font and typography ==========*/
-  --body-font: "Raleway", sans-serif;
+  --body-font: "Quicksand", sans-serif;
+  --header-font: "Yeseva One", sans-serif;
   --biggest-font-size: 2rem;
   --large-font-size: 2rem;
   --semi-large-font-size: 1.85rem;

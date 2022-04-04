@@ -2,7 +2,7 @@
   <div class="app-wrapper">
     <div class="app">
       <Navigation v-if="!navigation" />
-      <router-view class="top-margin" />
+      <router-view />
       <Footer v-if="!navigation" />
     </div>
   </div>
@@ -39,7 +39,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
 @import "./assets/styles/variables.css";
 
 * {
@@ -356,10 +357,11 @@ button,
 
 .home-head {
   color: var(--black-color);
-  font-weight: var(--font-bold);
+  font-weight: var(--font-light);
   font-size: var(--biggest-font-size);
   line-height: 1.2;
   margin-bottom: var(--mb-2);
+  font-family: var(--header-font);
 }
 
 .share-head {
