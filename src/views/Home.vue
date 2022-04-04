@@ -45,7 +45,9 @@
               />
             </div>
             <div class="video get-started" style="margin-top: 5rem">
-              <button class="start link" @click="register">Save Spot</button>
+              <button class="start link" @click="register">
+                Save Spot
+              </button>
             </div>
           </div>
           <div class="footer-modal">
@@ -88,10 +90,10 @@
               <button class="start link desktop" @click="showModal = true">
                 Save Spot
               </button>
-              <button class="start link mobile" @click="showModal = true">
+              <!-- <button class="start link mobile" @click="showModal = true">
                 Get Started
               </button>
-              <button class="start-light link mobile">Get The App</button>
+              <button class="start-light link mobile">Get The App</button> -->
             </div>
           </div>
           <div class="home__img">
@@ -284,9 +286,9 @@
             <div class="google-play">
               <img src="../assets/img/Google.png" width="150px" alt="" />
             </div>
-            <div class="mobile-screen">
+            <!-- <div class="mobile-screen">
               <img src="../assets/img/phone.png" width="300px" alt="" />
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -517,7 +519,7 @@ export default {
 .google-play,
 .mobile-screen {
   text-align: center;
-  margin: 8px auto;
+  margin: 8px auto 0px;
 }
 
 // .video {
@@ -648,7 +650,7 @@ export default {
     border-radius: 4px;
     font-size: var(--normal-font-size);
     @media (max-width: 576px) {
-      width: 10rem;
+      width: 11rem;
       height: 3rem;
     }
 
@@ -666,7 +668,7 @@ export default {
     height: 3.5rem;
     font-size: var(--normal-font-size);
     @media (max-width: 576px) {
-      width: 10rem;
+      width: 11rem;
       height: 3rem;
     }
 
