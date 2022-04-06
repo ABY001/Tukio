@@ -115,7 +115,7 @@
               At Eventsly, we believe true happiness and fulfillment can be
               found in the midst of people. In that vein, we’re on a one-track
               journey to finding you that person or group of persons that will
-              bring some joy into your life
+              bring some joy into your life.
             </div>
           </div>
           <div class="create__img">
