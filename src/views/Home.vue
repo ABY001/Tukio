@@ -45,9 +45,7 @@
               />
             </div>
             <div class="video get-started" style="margin-top: 5rem">
-              <button class="start link" @click="register">
-                Save Spot
-              </button>
+              <button class="start link" @click="register">Save Spot</button>
             </div>
           </div>
           <div class="footer-modal">
@@ -114,10 +112,10 @@
               We understand the importance of human connection
             </p>
             <div class="section-content">
-              We at Eventsly believe that humans can’t find true happiness and
-              fufilment in isolation. In that vein, we’re on a one-track journey
-              to finding you that person or group of persons that will bring
-              some joy into your life!
+              At Eventsly, we believe true happiness and fulfillment can be
+              found in the midst of people. In that vein, we’re on a one-track
+              journey to finding you that person or group of persons that will
+              bring some joy into your life
             </div>
           </div>
           <div class="create__img">
